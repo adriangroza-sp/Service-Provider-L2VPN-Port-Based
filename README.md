@@ -1,14 +1,18 @@
-# Service-Provider-L2VPN-Vlan Based
-Vlan-based L2VPN service implemented in EVE-NG. Includes topology, configuration, verification and troubleshooting
+## Port based L2 VPN Point to Point /Pseudowire
+Port-based L2VPN service implemented in EVE-NG. Includes topology, configuration, verification and troubleshooting
 
 ## Overview
 The service extends a customer VLAN across the provider network, allowing geographically separated customer sites to communicate as if they were connected to the same Layer 2 domain.
 
 ## Objectives
-Configure a VLAN-based L2VPN service
-Extend customer VLANs across the provider network
-Verify Layer 2 forwarding and connectivity
-Validate service operation through testing and troubleshooting
+Design and deploy a point-to-point Layer 2 VPN service across a service provider network.
+Provide transparent Ethernet connectivity between geographically separated customer sites.
+Implement a pseudowire-based service to emulate a dedicated leased Ethernet circuit.
+Transport customer Layer 2 traffic across a shared MPLS backbone while preserving Ethernet frame transparency.
+Establish secure and isolated customer connectivity independent of the provider infrastructure.
+
+## Limitations
+Port consumption and limited service density. Because a port-based VPWS maps one attachment circuit to one pseudowire, scaling customer services may require additional physical interfaces on both PE and CE devices. VLAN-based services can achieve higher interface utilization by multiplexing multiple services over the same physical port.
 
 ## Lab Environment
 - EVE-NG
@@ -27,7 +31,12 @@ Validate service operation through testing and troubleshooting
 -15.9(3)M9 Cisco
 
 ## Topology 
-<img width="1792" height="653" alt="L2VPN Point to Point Topology" src="https://github.com/user-attachments/assets/f7180160-42fc-41f7-ba46-702c852f48ef" />
+<img width="1626" height="365" alt="Port Based L2 VPN Point to Point" src="https://github.com/user-attachments/assets/5ade0d48-aed7-4a8f-aa7b-9c3df629d84a" />
+
+## Configuration 
+The complete configuration for this Port based solution can be found below 
+
+[L2VPN POINT TO POINT FULL CFG.txt](https://github.com/user-attachments/files/29291181/L2VPN.POINT.TO.POINT.FULL.CFG.txt)
 
 
 
