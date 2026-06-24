@@ -18,8 +18,19 @@ Validate service operation through testing and troubleshooting
   -1 P/Core device 
   -2 Customer Edge devices
 
-Vendors used
-
+## Vendors Used 
 -Cisco
 -Juniper
+
+## Software Release Version 
+-21.3R1.9 Junos
+-15.9(3)M9 Cisco
+
+## Topology 
+
+
+
+
+
+
 
