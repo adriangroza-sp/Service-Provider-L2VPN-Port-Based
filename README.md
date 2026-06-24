@@ -40,6 +40,18 @@ The complete configuration for this Port based solution can be found below
 
 
 
+## Verification
+
+show mpls interfaces - confirmed MPLS and LDP operation on the core-facing interface (Gi0/1), while the customer-facing interface (Gi0/0) remained a pure attachment circuit.
+
+show mpls forwarding-table - verified transport label forwarding towards the remote PE loopback (3.3.3.3/32) and the presence of the local Layer 2 circuit entry associated with VC ID 4.
+
+show mpls l2transport vc - confirmed the pseudowire was operational with VC ID 4 in an UP state between PE1 and PE2.
+
+show mpls l2transport summary - showed a single active virtual circuit, consistent with a point-to-point VPWS service.
+
+show mpls l2transport binding - verified the correct exchange of local and remote VC labels, Ethernet VC encapsulation, and MTU parameters.
+
 
 
 
